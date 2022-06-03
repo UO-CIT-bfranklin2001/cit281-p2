@@ -1,0 +1,44 @@
+/*
+    CIT 281 Project 2
+    Name: Benjamin Duilio Franklin
+*/
+
+// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+
+
+let lengthOfOutputString = getRandomInteger(10, 20);
+
+
+
+//Returns a single, random, lowercase letter
+function getRandomLetter() {
+    const alphabet = "abcdefghijklmnopqrstuvwxyz";
+    let randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
+    return randomLetter;
+}
+
+//Returns a random lowercase string in between 10 and 20 characters long
+function getRandomString(lengthOfOutputString) {
+  let result = "";
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const alphabetLength = alphabet.length;
+  for (let i = 0; i <= lengthOfOutputString; i++) {
+    result += alphabet.charAt(Math.floor(Math.random()* alphabetLength));
+  }
+  return result;
+}
+
+function getSortedString(string){ return string.split('').sort().join('');}
+
+//for (let i = 0; i < 1; i++) {
+  //result += getRandomLetter();
+//}
+
+//console.log(getRandomString(getRandomInteger(10, 20)));
+console.log(getSortedString("hello my name is ben"));
